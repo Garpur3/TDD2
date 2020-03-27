@@ -21,3 +21,5 @@ def test_greater_than_1000():
 def test_negative():
     with pytest.raises(ValueError, match="Negatives not allowed: -1"):
         kata.Add("-1,2")
+    with pytest.raises(ValueError, match="Negatives not allowed: -4,-5"):
+        kata.Add("2,-4,3,-5")
