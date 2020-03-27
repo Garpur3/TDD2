@@ -8,9 +8,9 @@ def Add(numbers):
         for number in list_of_numbers:
             if int(number) <= 1000:
                 if int(number) < 0:
-                    negatives += number + " "
+                    negatives += number + ","
                 total += int(number)
         if len(negatives) > 0:
-            raise ValueError(f"Negatives not allowed: {numbers}")
+            raise ValueError(f"Negatives not allowed: {negatives[:-1]}")
         return total
     return 0
