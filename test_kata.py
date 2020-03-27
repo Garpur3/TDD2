@@ -8,3 +8,6 @@ def test_single_digit():
 
 def test_two_digits():
     assert kata.Add("1,2") == 3
+
+def test_multiple_numbers():
+    assert kata.Add("1,2,3,4,5") == 15
