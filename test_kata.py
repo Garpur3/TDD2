@@ -1,4 +1,4 @@
-import kata
+import kata, pytest
 
 def test_empty_string():
     assert kata.Add("") == 0
@@ -17,3 +17,7 @@ def test_with_newline():
 
 def test_greater_than_1000():
     assert kata.Add("1001,2") == 2
+
+def test_negative():
+    with pytest.raises(ValueError, match="Negatives not allowed: -1"):
+        kata.Add("-1,2")
