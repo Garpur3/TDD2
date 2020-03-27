@@ -11,3 +11,6 @@ def test_two_digits():
 
 def test_multiple_numbers():
     assert kata.Add("1,2,3,4,5") == 15
+
+def test_with_newline():
+    assert kata.Add("1\n2,3") == 6
