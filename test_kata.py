@@ -14,3 +14,6 @@ def test_multiple_numbers():
 
 def test_with_newline():
     assert kata.Add("1\n2,3") == 6
+
+def test_greater_than_1000():
+    assert kata.Add("1001,2") == 2
