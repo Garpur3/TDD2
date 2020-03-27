@@ -2,7 +2,11 @@ import re
 
 def Add(numbers):
     if len(numbers) > 0:
-        list_of_numbers = re.split(",|\n", numbers)
+        delimiter = ","
+        if "//" in numbers:
+            delimiter = numbers[2]
+            numbers = numbers[4:]
+        list_of_numbers = re.split(f"{delimiter}|\n", numbers)
         total = 0
         negatives = ""
         for number in list_of_numbers:
