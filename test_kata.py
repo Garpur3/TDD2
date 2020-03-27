@@ -23,3 +23,7 @@ def test_negative():
         kata.Add("-1,2")
     with pytest.raises(ValueError, match="Negatives not allowed: -4,-5"):
         kata.Add("2,-4,3,-5")
+
+def test_delimiter():
+    assert kata.Add("//X\n1X2") == 3
+    assert kata.Add("//%\n1%2%3") == 6
