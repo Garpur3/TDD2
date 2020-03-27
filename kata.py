@@ -1,2 +1,2 @@
 def Add(numbers):
-    pass
+    return 0
