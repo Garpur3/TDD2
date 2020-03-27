@@ -5,6 +5,7 @@ def Add(numbers):
         list_of_numbers = re.split(",|\n", numbers)
         total = 0
         for number in list_of_numbers:
-            total += int(number)
+            if int(number) <= 1000:
+                total += int(number)
         return total
     return 0
